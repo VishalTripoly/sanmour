@@ -146,6 +146,16 @@ function loadProjects() {
   });
 }
 
+function getImageUrl(path) {
+ if (!path) return '../images/placeholder.png';
+ // Convert Windows backslashes to forward slashes
+ const cleanPath = path.replace(/\\/g, '/');
+ // Ensure no double slashes if API_URL ends with / or path starts with /
+ const baseUrl = API_URL.replace(/\/$/, '');
+ const relativePath = cleanPath.replace(/^\//, '');
+ return `${baseUrl}/${relativePath}`;
+}
+
 function renderProjects() {
  const container = document.getElementById('portfolioContainer');
  container.querySelectorAll('.element-item').forEach(e => e.remove());
@@ -157,10 +167,10 @@ function renderProjects() {
   <div class="col-md-3 col-sm-6 col-xs-12 element-item ${type}">
    <div class="portfolio-home2-item project-card"
         data-link="single_project.html?id=${project.id}">
-    <img src="${API_URL}/${project.thumbnail}"
+    <img src="${getImageUrl(project.thumbnail)}"
      class="img-responsive"
      style="height:250px;object-fit:cover;"
-     onerror="this.onerror=null;this.src='${API_URL}/uploads/placeholder.png';">
+     onerror="this.onerror=null;this.src='../images/placeholder.png';">
 
     <div class="overlay">
      <a href="single_project.html?id=${project.id}" class="btn-detail-project">

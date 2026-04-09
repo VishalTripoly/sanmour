@@ -229,6 +229,14 @@
 const params = new URLSearchParams(window.location.search);
 const projectId = params.get("id");
 
+function getImageUrl(path) {
+ if (!path) return 'images/placeholder.png';
+ const cleanPath = path.replace(/\\/g, '/');
+ const baseUrl = API_URL.replace(/\/$/, '');
+ const relativePath = cleanPath.replace(/^\//, '');
+ return `${baseUrl}/${relativePath}`;
+}
+
 /* PROJECT FETCH */
 fetch(`${API_URL}/projects/${projectId}`)
 .then(res => res.json())
@@ -249,21 +257,14 @@ document.getElementById("projectType").innerText = project.type;
 document.getElementById("projectDescription").innerText =
 project.description || "Description coming soon.";
 
-document.getElementById("projectImage").src =
-`${API_URL}/${project.thumbnail}`;
+document.getElementById("projectImage").src = getImageUrl(project.thumbnail);
 
 /* NEW BACKGROUND IMAGE */
 
 const header = document.getElementById("projectHeader");
 
 if(project.thumbnail){
-
-const imagePath = project.thumbnail.replace(/\\/g,"/");
-
-const finalURL = `${API_URL}/${imagePath}`;
-
-header.style.backgroundImage = `url('${finalURL}')`;
-
+  header.style.backgroundImage = `url('${getImageUrl(project.thumbnail)}')`;
 }
 
 });
@@ -282,10 +283,7 @@ fetch(`${API_URL}/projects/${projectId}/images`)
   const gallery = document.getElementById("gallery");
 
 images.forEach((img, index) => {
-
-  const imagePath = img.image_path || img;
-  const fullPath = `${API_URL}/${imagePath}`;
-
+  const fullPath = getImageUrl(img.image_path || img);
   galleryImages.push(fullPath); // store for slider
 
   gallery.insertAdjacentHTML("beforeend", `
@@ -296,7 +294,6 @@ images.forEach((img, index) => {
       style="margin-bottom:15px; cursor:pointer;">
     </div>
   `);
-
 });
 
 /* CLICK EVENT FOR LIGHTBOX */

@@ -248,6 +248,14 @@ Handles:
 let allProjects = [];     // stores all projects
 let currentPage = 1;      // current page
 const perPage = 8;        // projects per page
+ 
+function getImageUrl(path) {
+ if (!path) return '../images/placeholder.png';
+ const cleanPath = path.replace(/\\/g, '/');
+ const baseUrl = API_URL.replace(/\/$/, '');
+ const relativePath = cleanPath.replace(/^\//, '');
+ return `${baseUrl}/${relativePath}`;
+}
 
 /* Check if admin is logged in */
 function checkAuth(){
@@ -322,7 +330,7 @@ html+=`
 <td>${p.name}</td>
 
 <td>
-<img src="${API_URL}/${p.thumbnail}">
+<img src="${getImageUrl(p.thumbnail)}" style="width:50px; height:50px; object-fit:cover;">
 </td>
 
 <td>

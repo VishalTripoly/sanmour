@@ -110,6 +110,14 @@
 // API_URL is now defined in ../js/config.js
 let allProjects = [];
 
+function getImageUrl(path) {
+ if (!path) return '../images/placeholder.png';
+ const cleanPath = path.replace(/\\/g, '/');
+ const baseUrl = API_URL.replace(/\/$/, '');
+ const relativePath = cleanPath.replace(/^\//, '');
+ return `${baseUrl}/${relativePath}`;
+}
+
 function loadProjects() {
     fetch(`${API_URL}/projects`)
         .then(res => res.json())
@@ -142,10 +150,10 @@ function renderProjects() {
         const html = `
         <div class="col-md-3 col-sm-6 col-xs-12 element-item ${type}">
             <div class="portfolio-home2-item">
-                <img src="${API_URL}/${project.thumbnail}"
+                <img src="${getImageUrl(project.thumbnail)}"
                      class="img-responsive"
                      style="height:250px;object-fit:cover;"
-                     onerror="this.onerror=null;this.src='${API_URL}/uploads/placeholder.png';">
+                     onerror="this.onerror=null;this.src='../images/placeholder.png';">
 
                 <div class="overlay">
                     <a href="single_project.html?id=${project.id}" class="cate-project pt-3">
