@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/joho/godotenv"
 	"github.com/gin-contrib/cors"
@@ -14,10 +15,7 @@ import (
 
 func main() {
 	// Load environment variables from .env
-	err := godotenv.Load()
-	if err != nil {
-		log.Println("No .env file found, using system environment variables")
-	}
+	_ = godotenv.Load() // Ignore error in production
 
 	// Connect to database
 	db.Connect()
@@ -61,6 +59,11 @@ func main() {
 		admin.DELETE("/project-images/:id", handlers.DeleteProjectImage)
 	}
 
-	// Start server
-	r.Run(":8080")
+	// Start server on dynamic PORT (required by Render)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	log.Printf("Starting server on port %s...", port)
+	r.Run(":" + port)
 }
