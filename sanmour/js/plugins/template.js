@@ -103,4 +103,4 @@
   
   // gallery popup
 
-    baguetteBox.run(".tz-gallery");
+//    baguetteBox.run(".tz-gallery");
