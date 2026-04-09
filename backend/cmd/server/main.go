@@ -29,6 +29,7 @@ func main() {
 		AllowOrigins: []string{
 			"http://localhost:3000",
 			"http://127.0.0.1:3000",
+			"https://sanmour-nu.vercel.app",
 		},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Content-Type", "Authorization"},
