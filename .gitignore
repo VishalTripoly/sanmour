@@ -1,0 +1,8 @@
+node_modules/
+.env
+backend/bin/
+backend/server
+import_db.js
+import_db.go
+package-lock.json
+package.json
