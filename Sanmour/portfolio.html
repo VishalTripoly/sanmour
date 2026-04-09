@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SANMOUR ARCHITECTS & CONSULTANTS</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&subset=devanagari,latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="fonts/linearicon/style.css">
+<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/jquery.mmenu.all.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/dark.css">
+
+<link rel="shortcut icon" href="images/favicon.png"> <!-- Changed to local or let it be handled by Vercel -->
+</head>
+
+<body class="royal_loader">
+
+<div id="page">
+    <!-- Mobile Menu -->
+			<nav id="menu">
+				<ul>
+					<li >
+						<a href="index.html">HOME</a>
+						
+					</li>
+					<li>
+						<a href="about.html">ABOUT US</a>
+					</li>
+					<li>
+						<a href="services.html">SERVICES</a>
+						
+					</li>
+					<li class="active"> 
+						<a href="portfolio.html">PORTFOLIO</a>
+						
+					</li>
+					
+					
+					<li>
+						<a href="contact.html">CONTACT</a>
+					</li>
+					
+				</ul>
+			</nav>
+			<!-- /Mobile Menu -->
+
+
+<header id="stick" class="header-home">
+   <h1 class="logo"><a href="index.html" >
+        <img src="images/Sanmour_Logo.png" width="225" class="img-responsive" alt="Image"></a>
+    </h1>
+
+    <nav id="main-nav" class="main-nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li class="active"><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="boxed">
+
+    <!-- ✅ FIXED FILTERS (slug-based) -->
+    <div class="projectFilter text-center">
+        <a href="#" data-filter="*" class="current">All</a>
+        <a href="#" data-filter=".residential">Residential</a>
+        <a href="#" data-filter=".commercial">Commercial</a>
+        <a href="#" data-filter=".villa">Independent Bungalows / Villa</a>
+        <a href="#" data-filter=".school">School</a>
+        <a href="#" data-filter=".interior">Interior</a>
+    </div>
+
+    <div class="row">
+        <div class="list-portfolio-warp" id="portfolioContainer">
+            <div class="grid-sizer col-sm-6 col-md-3"></div>
+        </div>
+    </div>
+
+</section>
+
+            <footer class="footer-home-1">
+				<div class="footer-inner">
+					<div class="row">
+						<div class="col-md-6">
+							<a href="index.html" class="logo">
+								<img src="images/logo-on-dark.png" width="175" class="img-responsive" alt="Image">
+							</a>
+							<ul class="footer-link-2 ">
+								<li><a href="career.html">Career </a></li>
+								<li><a href="#">Privacy Policy </a></li>
+								<li><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+						</div>
+
+						<div class="col-md-3">
+							<ul class="widget-social-list">
+							   <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							   <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							   <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							   <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<div class="copyright">Copyright © 2025<br> All Right Reserved. Designed by TripolyStudio</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/bootstrap.js"></script>
+<script src="js/plugins/isotope.pkgd.min.js"></script>
+<script src="js/plugins/imagesloaded.pkgd.js"></script>
+<script src="js/plugins/jquery.mmenu.all.min.js"></script>
+<script src="js/plugins/mobilemenu.js"></script>
+<script src="js/plugins/royal_preloader.js"></script>
+<script src="js/plugins/template.js"></script>
+<script src="js/config.js"></script>
+
+<script>
+// API_URL is now defined in config.js
+let allProjects = [];
+
+function loadProjects() {
+ fetch(`${API_URL}/projects`)
+  .then(res => res.json())
+  .then(data => {
+    allProjects = data || [];
+    renderProjects();
+    initIsotope();
+  });
+}
+
+function renderProjects() {
+ const container = document.getElementById('portfolioContainer');
+ container.querySelectorAll('.element-item').forEach(e => e.remove());
+
+ allProjects.forEach(project => {
+  const type = (project.type || '').trim().toLowerCase(); // ✅ CRITICAL FIX
+
+  const html = `
+  <div class="col-md-3 col-sm-6 col-xs-12 element-item ${type}">
+   <div class="portfolio-home2-item project-card"
+        data-link="single_project.html?id=${project.id}">
+    <img src="${API_URL}/${project.thumbnail}"
+     class="img-responsive"
+     style="height:250px;object-fit:cover;"
+     onerror="this.onerror=null;this.src='${API_URL}/uploads/placeholder.png';">
+
+    <div class="overlay">
+     <a href="single_project.html?id=${project.id}" class="btn-detail-project">
+      <span class="lnr lnr-plus"></span>
+     </a>
+     <h4>${project.name}</h4>
+     <a class="cate-project">${project.type}</a>
+    </div>
+   </div>
+  </div>`;
+  container.insertAdjacentHTML('beforeend', html);
+ });
+}
+
+function initIsotope() {
+ const $container = $('.list-portfolio-warp');
+
+ $container.imagesLoaded(function () {
+  $container.isotope({
+   itemSelector: '.element-item',
+   layoutMode: 'masonry'
+  });
+
+  $('.projectFilter').on('click', 'a', function (e) {
+   e.preventDefault();
+   $('.projectFilter a').removeClass('current');
+   $(this).addClass('current');
+   $container.isotope({ filter: $(this).data('filter') });
+  });
+ });
+
+ // whole card clickable
+ $(document).on('click', '.project-card', function (e) {
+   if (!$(e.target).closest('a').length) {
+     window.location.href = $(this).data('link');
+   }
+ });
+}
+
+$(document).ready(loadProjects);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SANMOUR ARCHITECTS & CONSULTANTS</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&subset=devanagari,latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/linearicon/style.css">
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/dark.css">
+
+    <!-- Backend favicon -->
+    <link rel="shortcut icon" href="../images/favicon.png"> <!-- Local fallback -->
+</head>
+
+<body class="royal_loader">
+
+<div id="page">
+
+    <!-- Mobile Menu -->
+    <nav id="menu">
+				<ul>
+					<li class="active">
+						<a href="index.html">HOME</a>
+						
+					</li>
+						<a href="portfolio.html">PORTFOLIO</a>
+						
+					</li>
+				</ul>
+			</nav>
+
+
+    <!-- Header -->
+    <header id="stick" class="header-home">
+        <h1 class="logo"><a href="index.html" >
+            <img src="../images/Sanmour_Logo.png" width="225" class="img-responsive" alt="Image"></a>
+        </h1>
+
+        <nav id="main-nav" class="main-nav">
+					<ul>
+					<li >
+						<a href="index.html">HOME</a>
+						
+					</li>
+					<li class="active"> 
+						<a href="portfolio.html">PORTFOLIO</a>
+						
+					</li>
+				</ul>
+				</nav>
+				<a href="#menu" class="btn-menu-mobile"><span class="lnr lnr-menu"></span></a>
+			</header>
+
+    <!-- Portfolio Section -->
+    <section class="boxed">
+
+        <!-- Filters -->
+        <div class="projectFilter text-center">
+        <a href="#" data-filter="*" class="current">All</a>
+        <a href="#" data-filter=".residential">Residential</a>
+        <a href="#" data-filter=".commercial">Commercial</a>
+        <a href="#" data-filter=".villa">Independent Bungalows / Villa</a>
+        <a href="#" data-filter=".school">School</a>
+        <a href="#" data-filter=".interior">Interior</a>
+    </div>
+
+
+        <!-- Portfolio Grid -->
+        <div class="row">
+            <div class="list-portfolio-warp" id="portfolioContainer">
+                <div class="grid-sizer col-sm-6 col-md-3"></div>
+            </div>
+        </div>
+
+    </section>
+    
+</div>
+
+<a id="to-the-top" class="fixbtt bg-hover-theme">
+    <i class="fa fa-chevron-up"></i>
+</a>  
+
+<!-- Scripts -->
+<script src="../js/vendor/jquery.min.js"></script>
+<script src="../js/vendor/bootstrap.js"></script>
+<script src="../js/plugins/jquery.sticky-kit.min.js"></script>
+<script src="../js/plugins/jquery.waypoints.min.js"></script>
+<script src="../js/plugins/isotope.pkgd.min.js"></script>
+<script src="../js/plugins/imagesloaded.pkgd.js"></script>
+<script src="../js/plugins/custom-isotope.js"></script>
+<script src="../js/plugins/jquery.mmenu.all.min.js"></script>
+<script src="../js/plugins/mobilemenu.js"></script>
+<script src="../js/plugins/owl.carousel.js"></script>
+<script src="../js/plugins/owl.js"></script>
+<script src="../js/plugins/royal_preloader.js"></script>
+<script src="../js/plugins/template.js"></script>
+<script src="../js/config.js"></script>
+
+<!-- Dynamic Portfolio Logic (UNCHANGED) -->
+<script>
+// API_URL is now defined in ../js/config.js
+let allProjects = [];
+
+function loadProjects() {
+    fetch(`${API_URL}/projects`)
+        .then(res => res.json())
+        .then(data => {
+            allProjects = data || [];
+            renderProjects();
+            initIsotope();
+        })
+        .catch(() => {
+            document.getElementById('portfolioContainer').innerHTML =
+                '<p class="text-center">Unable to load projects.</p>';
+        });
+}
+
+function renderProjects() {
+    const container = document.getElementById('portfolioContainer');
+    container.querySelectorAll('.element-item').forEach(e => e.remove());
+
+    allProjects.forEach(project => {
+
+        let type = (project.type || '').trim().toLowerCase();
+
+        // 🔴 CRITICAL FIX: normalize categories
+        if (type.includes('villa')) type = 'villa';
+        else if (type.includes('residential')) type = 'residential';
+        else if (type.includes('commercial')) type = 'commercial';
+        else if (type.includes('school')) type = 'school';
+        else if (type.includes('interior')) type = 'interior';
+
+        const html = `
+        <div class="col-md-3 col-sm-6 col-xs-12 element-item ${type}">
+            <div class="portfolio-home2-item">
+                <img src="${API_URL}/${project.thumbnail}"
+                     class="img-responsive"
+                     style="height:250px;object-fit:cover;"
+                     onerror="this.onerror=null;this.src='${API_URL}/uploads/placeholder.png';">
+
+                <div class="overlay">
+                    <a href="single_project.html?id=${project.id}" class="cate-project pt-3">
+                        ${project.type}
+                    </a>
+                    <h4>
+                        <a href="single_project.html?id=${project.id}">
+                            ${project.name}
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>`;
+        container.insertAdjacentHTML('beforeend', html);
+    });
+    // ✅ TELL ISOTOPE ABOUT NEW ITEMS
+    const $container = $('.list-portfolio-warp');
+    $container.isotope('reloadItems');
+    $container.isotope({ sortBy: 'original-order' });
+}
+
+function initIsotope() {
+    const $container = $('.list-portfolio-warp');
+    $container.imagesLoaded(function () {
+        $container.isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'masonry'
+        });
+
+        $('.projectFilter').on('click', 'a', function (e) {
+            e.preventDefault();
+            $('.projectFilter a').removeClass('current');
+            $(this).addClass('current');
+            $container.isotope({ filter: $(this).data('filter') });
+        });
+    });
+}
+
+$(document).ready(loadProjects);
+</script>
+
+</body>
+</html>
