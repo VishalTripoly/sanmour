@@ -49,7 +49,7 @@ h4 {
 }
 h5 {
   font-size: 16px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-weight: 500;
 }
 h6 {
@@ -1823,6 +1823,7 @@ body.royal_loader {
   font-size: 25px;
   color: #999494;
   line-height: 30px;
+  margin-left: 10px;
 }
 .ey1 {
   margin-top: 80px;
@@ -5086,7 +5087,13 @@ label {
 /* icon box */
 .icon-box-inline {
   position: relative;
-  padding: 20px 0 20px 80px;
+  /* padding: 20px 0 20px 80px; */
+  /* text-align: center; */
+}
+.icon-box-inline .fa{
+  font-size: 40px;
+  color:#e3bd8f;
+  line-height: 2;
 }
 .icon-box-inline img,
 .icon-box-inline span {
@@ -5094,6 +5101,9 @@ label {
   position: absolute;
   top: 0;
   left: 0;
+}
+.icon-box-inline p{
+line-height: 1.75;
 }
 .icon-box-contact {
   position: relative;
