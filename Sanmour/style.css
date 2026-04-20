@@ -8842,7 +8842,7 @@ footer.dark {
   }
   /* pagination */
   .owl-page-h .owl-controls {
-    margin-bottom: 60px;
+    margin-bottom: 0px;
     position: static;
     display: block;
     text-align: center;
@@ -8927,6 +8927,13 @@ footer.dark {
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
+  .container{
+  width:100% !important;
+}
+h2{
+  font-size: 24px;
+  line-height: normal;
+}
   /* HEader */
   header {
     padding: 0 15px;
@@ -8961,6 +8968,11 @@ footer.dark {
   .bg-top-right {
     background: transparent;
   }
+  .bg-top-right h2{
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
   .bg-top-right-services {
     background: transparent;
   }
@@ -8983,16 +8995,16 @@ footer.dark {
   }
   /* Promotion text */
   .experience-year span {
-    font-size: 150px;
+    font-size: 50px;
   }
   .ey1 {
     margin-top: 0;
   }
   .experience-year strong {
-    font-size: 36px;
+    font-size: 22px;
     color: #333131;
-    letter-spacing: 4px;
-    line-height: 40px;
+    letter-spacing: 3px;
+    line-height: normal;
   }
   .experience-year {
     text-align: center!important;
@@ -9000,9 +9012,18 @@ footer.dark {
   .experience-year .des-text {
     text-align: center!important;
   }
+  .counter-block span.counter{
+    font-size: 20px;
+  }
+  .counter-block p{
+    font-size: 16px;
+  }
   /* Testimonial */
   .item-testimonial-2 .info {
     padding-right: 0;
+  }
+  .item-testimonial-1{
+    padding: 0 15px;
   }
   /* Services */
   .services-post {
@@ -9117,7 +9138,7 @@ footer.dark {
 @media only screen and (max-width: 479px) {
   /* HEader */
   header .logo {
-    width: 150px;
+    width: 120px;
     padding: 15px 0;
   }
   .btn-menu-mobile,
