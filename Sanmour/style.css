@@ -8945,6 +8945,9 @@ h4{
 .mgt-60{
   margin-top:10px;
 }
+.rev_slider{
+  height: 420px !important;
+}
   /* HEader */
   header {
     padding: 0 15px;
@@ -9312,3 +9315,13 @@ button.mfp-arrow, .mfp-counter {
 .tz-gallery > .row >.col-md-4.col-sm-4 {
     padding: 20px;
 } 
+
+.slotholder::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.55) !important;
+}
