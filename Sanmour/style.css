@@ -5192,7 +5192,7 @@ line-height: 1.75;
   position: fixed;
   text-align: center;
   right: 30px;
-  bottom: 30px;
+  bottom: 50px;
   color: #fff;
   cursor: pointer;
   -webkit-border-radius: 2px;
@@ -5267,7 +5267,7 @@ footer > * {
 }
 /* Footer Home 1 */
 .footer-home-1 .footer-inner {
-  padding: 25px 80px;
+  padding: 25px 20px;
 }
 .footer-home-1 .logo {
   float: left;
@@ -8933,6 +8933,17 @@ footer.dark {
 h2{
   font-size: 24px;
   line-height: normal;
+  margin-bottom: 10px;
+}
+
+h4{
+  font-size: 16px;
+  padding: 0 10px;
+  line-height: 1.5;
+  margin-top: 10px;;
+}
+.mgt-60{
+  margin-top:10px;
 }
   /* HEader */
   header {
@@ -9034,6 +9045,7 @@ h2{
   }
   .title-block-number {
     padding-left: 56px;
+    margin-bottom: 10px;;
   }
   .title-block-number .big-number {
     font-size: 40px;
