@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "6a02ddfb5b7d767161a7fdb1"
+  },
+  "project_name": "AARAMBH SCHOOL",
+  "project_type": "school",
+  "description": "A school construction project designed with classrooms, laboratories, playgrounds, and safety facilities to provide a quality learning environment.",
+  "thumbnail": "uploads\\1778572795028589100_CAM 02.webp",
+  "status": "active",
+  "client_name": "Future Education Trust",
+  "location": "GHUMA",
+  "created_at": {
+    "$date": "2026-05-12T07:59:55.032Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a02de8e5b7d767161a7fdbb"
+  },
+  "project_name": "AMBUJA APARTMENT",
+  "project_type": "residential",
+  "description": "A modern residential apartment project designed with comfortable living spaces, parking facilities, security systems, and family-friendly amenities.",
+  "thumbnail": "uploads\\1778572942428022900_02 FRONT VIEW.webp",
+  "status": "active",
+  "client_name": "ABC Builders",
+  "location": "MANINAGAR",
+  "created_at": {
+    "$date": "2026-05-12T08:02:22.429Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a02df195b7d767161a7fdc1"
+  },
+  "project_name": "HIRABHAI METAL MARKET",
+  "project_type": "commercial",
+  "description": "A commercial building project developed for office spaces and retail shops with modern infrastructure, parking, and security facilities.",
+  "thumbnail": "uploads\\1778573081675040700_Fv_Estate Row Front View.webp",
+  "status": "active",
+  "client_name": "Space Constructions",
+  "location": "RAKHIYAL",
+  "created_at": {
+    "$date": "2026-05-12T08:04:41.695Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a02dfdc5b7d767161a7fdcc"
+  },
+  "project_name": "SWARA",
+  "project_type": "interior",
+  "description": "An interior design project focused on creating stylish and functional spaces with modern furniture, lighting, and customized decor solutions.",
+  "thumbnail": "uploads\\1778573276031828500_CAM-01_WHITHOUT LOGO.webp",
+  "status": "active",
+  "client_name": "Space Interiors",
+  "location": "NAROL",
+  "created_at": {
+    "$date": "2026-05-12T08:07:56.033Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a02e0675b7d767161a7fde9"
+  },
+  "project_name": "COLIN NIKETAM",
+  "project_type": "villa",
+  "description": "A luxury villa project consisting of independent houses with modern architecture, private gardens, and premium lifestyle amenities.",
+  "thumbnail": "uploads\\1778573415273221600_Fv_Gate View R2.webp",
+  "status": "active",
+  "client_name": "Homes Builders",
+  "location": "BECHRAJI",
+  "created_at": {
+    "$date": "2026-05-12T08:10:15.276Z"
+  }
+}]
