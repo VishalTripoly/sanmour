@@ -27,9 +27,8 @@ func main() {
 
 	// Enable CORS for frontend
 	r.Use(cors.New(cors.Config{
-		AllowOrigins: []string{
-			"http://localhost:3000",
-			"http://127.0.0.1:3000",
+		AllowOriginFunc: func(origin string) bool {
+			return true // Allow all origins for Vercel and local dev
 		},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Content-Type", "Authorization"},
