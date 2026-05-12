@@ -1,7 +1,8 @@
 {
-  "version": 2,
-  "public": true,
-  "buildCommand": "echo 'No build command needed'",
-  "outputDirectory": "Sanmour",
-  "framework": null
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/Sanmour/$1"
+    }
+  ]
 }
