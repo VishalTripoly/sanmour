@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../css/dark.css">
 
     <!-- Backend favicon -->
-    <link rel="shortcut icon" href="http://localhost:8080/uploads/favicon.png">
+    <link rel="shortcut icon" href="https://sanmour-backend.onrender.com/uploads/favicon.png">
 </head>
 
 <body class="royal_loader">
@@ -43,7 +43,7 @@
     <header id="stick" class="header-home">
         <h1 class="logo">
             <a href="index.html">
-                <img src="http://localhost:8080/uploads/logo-on-dark.png"
+                <img src="https://sanmour-backend.onrender.com/uploads/logo-on-dark.png"
                      width="225"
                      class="img-responsive"
                      alt="SANMOUR Logo">
@@ -111,7 +111,7 @@
 
 <!-- Dynamic Portfolio Logic (UNCHANGED) -->
 <script>
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://sanmour-backend.onrender.com';
 let allProjects = [];
 
 function loadProjects() {
@@ -170,7 +170,7 @@ function renderProjects() {
 
        container.insertAdjacentHTML('beforeend', html);
     });
-    // ✅ TELL ISOTOPE ABOUT NEW ITEMS
+    // âœ… TELL ISOTOPE ABOUT NEW ITEMS
     const $container = $('.list-portfolio-warp');
     $container.isotope('reloadItems');
     $container.isotope({ sortBy: 'original-order' });
