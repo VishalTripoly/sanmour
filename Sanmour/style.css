@@ -49,7 +49,7 @@ h4 {
 }
 h5 {
   font-size: 16px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-weight: 500;
 }
 h6 {
@@ -1362,6 +1362,8 @@ header.is_stuck {
 .bg-image-post {
   position: absolute;
   height: 100%;
+  background-position: 100% 100%;
+  background-size: cover;
 }
 /* ==========================================================================
    Typo
@@ -1823,6 +1825,7 @@ body.royal_loader {
   font-size: 25px;
   color: #999494;
   line-height: 30px;
+  margin-left: 10px;
 }
 .ey1 {
   margin-top: 80px;
@@ -5086,7 +5089,13 @@ label {
 /* icon box */
 .icon-box-inline {
   position: relative;
-  padding: 20px 0 20px 80px;
+  /* padding: 20px 0 20px 80px; */
+  /* text-align: center; */
+}
+.icon-box-inline .fa{
+  font-size: 40px;
+  color:#e3bd8f;
+  line-height: 2;
 }
 .icon-box-inline img,
 .icon-box-inline span {
@@ -5094,6 +5103,9 @@ label {
   position: absolute;
   top: 0;
   left: 0;
+}
+.icon-box-inline p{
+line-height: 1.75;
 }
 .icon-box-contact {
   position: relative;
@@ -5180,7 +5192,7 @@ label {
   position: fixed;
   text-align: center;
   right: 30px;
-  bottom: 30px;
+  bottom: 50px;
   color: #fff;
   cursor: pointer;
   -webkit-border-radius: 2px;
@@ -5255,7 +5267,7 @@ footer > * {
 }
 /* Footer Home 1 */
 .footer-home-1 .footer-inner {
-  padding: 25px 80px;
+  padding: 25px 20px;
 }
 .footer-home-1 .logo {
   float: left;
@@ -8830,7 +8842,7 @@ footer.dark {
   }
   /* pagination */
   .owl-page-h .owl-controls {
-    margin-bottom: 60px;
+    margin-bottom: 0px;
     position: static;
     display: block;
     text-align: center;
@@ -8915,6 +8927,27 @@ footer.dark {
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
+  .container{
+  width:100% !important;
+}
+h2{
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+h4{
+  font-size: 16px;
+  padding: 0 10px;
+  line-height: 1.5;
+  margin-top: 10px;;
+}
+.mgt-60{
+  margin-top:10px;
+}
+.rev_slider{
+  height: 420px !important;
+}
   /* HEader */
   header {
     padding: 0 15px;
@@ -8949,6 +8982,11 @@ footer.dark {
   .bg-top-right {
     background: transparent;
   }
+  .bg-top-right h2{
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
   .bg-top-right-services {
     background: transparent;
   }
@@ -8971,16 +9009,16 @@ footer.dark {
   }
   /* Promotion text */
   .experience-year span {
-    font-size: 150px;
+    font-size: 50px;
   }
   .ey1 {
     margin-top: 0;
   }
   .experience-year strong {
-    font-size: 36px;
+    font-size: 22px;
     color: #333131;
-    letter-spacing: 4px;
-    line-height: 40px;
+    letter-spacing: 3px;
+    line-height: normal;
   }
   .experience-year {
     text-align: center!important;
@@ -8988,9 +9026,18 @@ footer.dark {
   .experience-year .des-text {
     text-align: center!important;
   }
+  .counter-block span.counter{
+    font-size: 20px;
+  }
+  .counter-block p{
+    font-size: 16px;
+  }
   /* Testimonial */
   .item-testimonial-2 .info {
     padding-right: 0;
+  }
+  .item-testimonial-1{
+    padding: 0 15px;
   }
   /* Services */
   .services-post {
@@ -9001,6 +9048,7 @@ footer.dark {
   }
   .title-block-number {
     padding-left: 56px;
+    margin-bottom: 10px;;
   }
   .title-block-number .big-number {
     font-size: 40px;
@@ -9105,7 +9153,7 @@ footer.dark {
 @media only screen and (max-width: 479px) {
   /* HEader */
   header .logo {
-    width: 150px;
+    width: 120px;
     padding: 15px 0;
   }
   .btn-menu-mobile,
@@ -9267,3 +9315,13 @@ button.mfp-arrow, .mfp-counter {
 .tz-gallery > .row >.col-md-4.col-sm-4 {
     padding: 20px;
 } 
+
+.slotholder::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.55) !important;
+}

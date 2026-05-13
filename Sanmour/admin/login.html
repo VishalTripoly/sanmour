@@ -48,7 +48,7 @@
     </section>
 
     <script>
-        const API_URL = 'https://sanmour-backend.onrender.com';
+        const API_URL = 'http://localhost:8080';
 
         document.getElementById('loginForm').addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -74,7 +74,7 @@
                 const data = await response.json();
 
                 if (response.ok && data.token) {
-                    messageDiv.innerHTML = '<p class="success">âœ“ Login successful! Redirecting...</p>';
+                    messageDiv.innerHTML = '<p class="success">✓ Login successful! Redirecting...</p>';
                     
                     // Save token and email to localStorage
                     localStorage.setItem('adminToken', data.token);
@@ -85,13 +85,13 @@
                         window.location.href = 'index.html';
                     }, 1500);
                 } else {
-                    messageDiv.innerHTML = `<p class="error">âœ— ${data.error || 'Login failed'}</p>`;
+                    messageDiv.innerHTML = `<p class="error">✗ ${data.error || 'Login failed'}</p>`;
                     loginBtn.disabled = false;
                     loginBtn.textContent = 'Login';
                 }
             } catch (error) {
                 console.error('Error:', error);
-                messageDiv.innerHTML = '<p class="error">âœ— Network error. Is the backend running?</p>';
+                messageDiv.innerHTML = '<p class="error">✗ Network error. Is the backend running?</p>';
                 loginBtn.disabled = false;
                 loginBtn.textContent = 'Login';
             }

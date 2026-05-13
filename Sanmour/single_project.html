@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title id="pageTitle">Project â€“ SANMOUR</title>
+<title id="pageTitle">Project – SANMOUR</title>
 
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="fonts/linearicon/style.css">
@@ -106,7 +106,7 @@
 			<header  id="stick" class="header-home">
 				 <h1 class="logo">
           <a href="index.html">
-            <img src="https://sanmour-backend.onrender.com/uploads/logo-on-dark.png"
+            <img src="http://localhost:8080/uploads/logo-on-dark.png"
                  width="175"
                  class="img-responsive"
                  alt="SANMOUR">
@@ -176,7 +176,7 @@
 
 </article>
 
-<!-- ðŸ”¹ PROJECT GALLERY -->
+<!-- 🔹 PROJECT GALLERY -->
 <div class="row" style="margin-top:40px">
   <div class="col-md-12">
     <h3>Project Gallery</h3>
@@ -198,7 +198,7 @@
 </div>
 <div class="col-md-6 text-right">
 <div class="copyright">
-Â© 2025 SANMOUR. All Rights Reserved.
+© 2025 SANMOUR. All Rights Reserved.
 </div>
 </div>
 </div>
@@ -216,7 +216,7 @@
 
 <script>
 
-const API_URL = "https://sanmour-backend.onrender.com";
+const API_URL = "http://localhost:8080";
 const params = new URLSearchParams(window.location.search);
 const projectId = params.get("id");
 
@@ -265,7 +265,7 @@ header.style.backgroundImage = `url('${finalURL}')`;
 /* =========================
    GLOBAL VARIABLES
 ========================= */
-let galleryImages = []; // âœ… global to store gallery images for slider
+let galleryImages = []; // ✅ global to store gallery images for slider
 let currentIndex = 0;
 
 /* GALLERY FETCH */

@@ -6,14 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title id="pageTitle">Project Details â€“ SANMOUR</title>
+<title id="pageTitle">Project Details – SANMOUR</title>
 
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../css/jquery.mmenu.all.css">
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../css/dark.css">
 
-<link rel="shortcut icon" href="https://sanmour-backend.onrender.com/uploads/favicon.png">
+<link rel="shortcut icon" href="http://localhost:8080/uploads/favicon.png">
 
 <style>
 .project-image img {
@@ -122,7 +122,7 @@ z-index:2;
 			<header  id="stick" class="header-home">
 				 <h1 class="logo">
           <a href="index.html">
-            <img src="https://sanmour-backend.onrender.com/uploads/logo-on-dark.png"
+            <img src="http://localhost:8080/uploads/logo-on-dark.png"
                  width="175"
                  class="img-responsive"
                  alt="SANMOUR">
@@ -290,7 +290,7 @@ No gallery images uploaded for this project.
 
 <div class="col-md-6">
 <a href="index.html" class="logo">
-<img src="https://sanmour-backend.onrender.com/uploads/logo-on-dark.png"
+<img src="http://localhost:8080/uploads/logo-on-dark.png"
 width="175"
 class="img-responsive">
 </a>
@@ -298,7 +298,7 @@ class="img-responsive">
 
 <div class="col-md-6 text-right">
 <div class="copyright">
-Â© 2025 SANMOUR. All Rights Reserved.
+© 2025 SANMOUR. All Rights Reserved.
 </div>
 </div>
 
@@ -322,7 +322,7 @@ class="img-responsive">
 
 <script>
 
-const API_URL = "https://sanmour-backend.onrender.com";
+const API_URL = "http://localhost:8080";
 const token = localStorage.getItem("adminToken");
 
 const params = new URLSearchParams(window.location.search);
@@ -403,7 +403,7 @@ imageEl.src = `${API_URL}/${img.image_path}`;
 
 const delBtn = document.createElement("button");
 
-delBtn.innerText = "âœ–";
+delBtn.innerText = "✖";
 
 delBtn.style.position = "absolute";
 delBtn.style.top = "5px";

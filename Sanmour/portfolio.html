@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="css/dark.css">
 
-<link rel="shortcut icon" href="https://sanmour-backend.onrender.com/uploads/favicon.png">
+<link rel="shortcut icon" href="http://localhost:8080/uploads/favicon.png">
 </head>
 
 <body class="royal_loader">
@@ -54,10 +54,8 @@
 
 
 <header id="stick" class="header-home">
-    <h1 class="logo">
-        <a href="index.html">
-            <img src="https://sanmour-backend.onrender.com/uploads/logo-on-dark.png" width="225" class="img-responsive">
-        </a>
+    <h1 class="logo"><a href="index.html" >
+        <img src="images/Sanmour_Logo.png" width="225" class="img-responsive" alt="Image"></a>
     </h1>
 
     <nav id="main-nav" class="main-nav">
@@ -73,10 +71,9 @@
 
 <section class="boxed">
 
-    <!-- âœ… FIXED FILTERS (slug-based) -->
+    <!-- ✅ FIXED FILTERS (slug-based) -->
     <div class="projectFilter text-center">
-        <a href="#" data-filter="*" class="current">All</a>
-        <a href="#" data-filter=".residential">Residential</a>
+        <a href="#" data-filter=".residential"  class="current">Residential</a>
         <a href="#" data-filter=".commercial">Commercial</a>
         <a href="#" data-filter=".villa">Independent Bungalows / Villa</a>
         <a href="#" data-filter=".school">School</a>
@@ -91,15 +88,36 @@
 
 </section>
 
-<footer class="footer-home-1 dark">
-    <div class="footer-inner">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="https://sanmour-backend.onrender.com/uploads/logo-on-dark.png" width="175">
-            </div>
-        </div>
-    </div>
-</footer>
+<footer class="footer-home-1">
+
+				<div class="footer-inner">
+					<div class="row">
+						<div class="col-md-6">
+							<a href="index.html" class="logo">
+								<img src="images/logo-on-dark.png" width="175" class="img-responsive" alt="Image">
+							</a>
+							<ul class="footer-link-2 ">
+								<li><a href="career.html">Career </a></li>
+								<li><a href="#">Privacy Policy </a></li>
+								<li><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+						</div>
+
+						<div class="col-md-3">
+							<ul class="widget-social-list">
+							   <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							   <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							   <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							   <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<div class="copyright">Copyright © 2025<br> All Right Reserved. Designed by TripolyStudio</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 
 </div>
 
@@ -114,7 +132,7 @@
 <script src="js/plugins/template.js"></script>
 
 <script>
-const API_URL = 'https://sanmour-backend.onrender.com';
+const API_URL = 'http://localhost:8080';
 let allProjects = [];
 
 function loadProjects() {
