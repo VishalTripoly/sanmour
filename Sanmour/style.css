@@ -1814,6 +1814,7 @@ body.royal_loader {
 .experience-year .des-text {
   display: inline-block;
   vertical-align: 50px;
+  margin-left: 20px;
 }
 .experience-year strong {
   font-size: 50px;
@@ -1848,7 +1849,7 @@ body.royal_loader {
 /* Portfolio */
 .portfolio-des {
   max-width: 440px;
-  padding-top: 135px;
+  /* padding-top: 135px; */
 }
 .owl-portfolio-h1 {
   position: relative;
@@ -1933,6 +1934,7 @@ body.royal_loader {
   color: #333131;
 }
 .textarea-contact {
+  margin-top:15px;
   border: 0;
   outline: 0;
   -webkit-box-shadow: none;
@@ -1940,7 +1942,7 @@ body.royal_loader {
   background: transparent;
   border-bottom: 1px solid #999494;
   width: 100%;
-  min-height: 130px;
+  min-height: 115px;
   resize: vertical;
   -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
@@ -8584,7 +8586,7 @@ footer.dark {
   }
   /* Portfolio home 1 owl */
   .portfolio-des {
-    padding-top: 15px;
+    /* padding-top: 15px; */
     padding-right: 90px;
   }
   /* Dotted owl */
@@ -9249,7 +9251,7 @@ h1{
   text-align:center;
 }
 .container{
-  width:80%;
+  /* width:80%; */
   margin:0 auto;
 }
 
@@ -9318,7 +9320,7 @@ button.mfp-arrow, .mfp-counter {
 
 .slotholder::before{
     content: '';
-    position: absolute;
+    position: absolute !important;
     top:0;
     left: 0;
     width: 100%;
