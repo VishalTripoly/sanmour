@@ -8932,6 +8932,14 @@ footer.dark {
   .container{
   width:100% !important;
 }
+.typo-1{
+  font-size: 18px;
+}
+.typo-2{
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+  margin-top: -28px !important;
+}
 h2{
   font-size: 24px;
   line-height: normal;
@@ -8985,9 +8993,13 @@ h4{
     background: transparent;
   }
   .bg-top-right h2{
-    font-size: 20px;
+    font-size: 16px;
     line-height: normal;
     margin-bottom: 10px;
+  }
+  .bg-top-right p{
+font-size: 12px;
+line-height: 20px;
   }
   .bg-top-right-services {
     background: transparent;
@@ -8995,10 +9007,32 @@ h4{
   .line-top-right {
     display: none;
   }
+  .portfolio-des p {
+    margin-bottom: 25px;
+}
+.owl-page-h .owl-controls .owl-dot{
+  width: 10px;
+  height:10px;}
+.experience-year strong{
+  font-size:16px !important;
+}
+.portfolio-des h3{
+  font-size: 16px !important;
+}
+.owl-dots{
+  margin-bottom: 0;
+}
   /* Testimonial */
   .item-testimonial-1 h2 {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .item-testimonial-1 p{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .item-testimonial-1 p{
+    margin: 30px;;
   }
   .btn-1 {
     font-size: 20px;
@@ -9012,6 +9046,7 @@ h4{
   /* Promotion text */
   .experience-year span {
     font-size: 50px;
+
   }
   .ey1 {
     margin-top: 0;
@@ -9024,6 +9059,7 @@ h4{
   }
   .experience-year {
     text-align: center!important;
+    padding: 15px 0 0 0!important;
   }
   .experience-year .des-text {
     text-align: center!important;
@@ -9138,8 +9174,10 @@ h4{
     text-align: center;
   }
   .copyright {
-    text-align: center!important;
-  }
+        text-align: center !important;
+        font-size: 12px;
+        line-height: 18px !important;
+    }
   .footer-3 .widget-social-list li a {
     line-height: 30px;
   }
