@@ -5199,7 +5199,7 @@ line-height: 1.75;
   cursor: pointer;
   -webkit-border-radius: 2px;
           border-radius: 2px;
-  z-index: 10000;
+  z-index: 1;
   height: 40px;
   width: 40px;
   line-height: 40px;
@@ -8941,14 +8941,14 @@ footer.dark {
   margin-top: -28px !important;
 }
 h2{
-  font-size: 24px;
+  font-size: 18px;
   line-height: normal;
   margin-bottom: 10px;
 }
 
 h4{
   font-size: 16px;
-  padding: 0 10px;
+  /* padding: 0 10px; */
   line-height: 1.5;
   margin-top: 10px;;
 }
@@ -8996,6 +8996,7 @@ h4{
     font-size: 16px;
     line-height: normal;
     margin-bottom: 10px;
+    letter-spacing: normal;
   }
   .bg-top-right p{
 font-size: 12px;
@@ -9021,6 +9022,7 @@ line-height: 20px;
 }
 .owl-dots{
   margin-bottom: 0;
+  margin-top:-22px;
 }
   /* Testimonial */
   .item-testimonial-1 h2 {
@@ -9045,7 +9047,11 @@ line-height: 20px;
   }
   /* Promotion text */
   .experience-year span {
-    font-size: 50px;
+    font-size: 35px;
+
+  }
+  .experience-year .plus {
+    font-size: 25px;
 
   }
   .ey1 {
@@ -9060,12 +9066,19 @@ line-height: 20px;
   .experience-year {
     text-align: center!important;
     padding: 15px 0 0 0!important;
+    font-size: 14px !important;
   }
   .experience-year .des-text {
     text-align: center!important;
   }
+  .counter-block{
+    text-align: left !important;
+  }
   .counter-block span.counter{
     font-size: 20px;
+  }
+  .counter-block span.counter{
+    line-height: 30px;
   }
   .counter-block p{
     font-size: 16px;
@@ -9082,7 +9095,7 @@ line-height: 20px;
     margin-bottom: 30px;
   }
   .services-post .desc {
-    padding: 15px 0;
+    padding: 30px 0 0 0;
   }
   .title-block-number {
     padding-left: 56px;
@@ -9092,7 +9105,7 @@ line-height: 20px;
     font-size: 40px;
   }
   .title-block-number .title-with-sub {
-    font-size: 20px;
+    font-size: 16px;
     padding-top: 0;
   }
   .title-block-number span.sub-title {
@@ -9187,6 +9200,68 @@ line-height: 20px;
   .footer-5 .copyright {
     margin-top: 15px;
   }
+  h3.title-with-sub{
+    font-size: 18px;
+  }
+  .icon-box-inline .fa{
+    font-size: 30px;
+  }
+   .icon-box-inline{
+    display: flex;
+    margin-bottom: 20px;
+    
+  }
+  .icon-box-block{
+     display: flex;
+    margin-bottom: 0px;
+  }
+  .details{
+    margin-left:15px;
+  }
+  .details h5{
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+   .experience-year.ey1.d-xl-none.d-flex{
+    display: block !important;
+   }
+  .experience-year.ey1.d-xl-none.d-flex .des-text.ms-2{
+    vertical-align: super !important;
+    margin: 0 5px !important;
+  }
+  .experience-year.ey1.d-xl-block.d-none{
+    display: none !important;
+  }
+  .carousel-indicators{
+    display: none !important
+  }
+  /* about */
+  .col-md-4.col-sm-4.text-right {
+    text-align: left;
+}
+p{
+  line-height: 1.75;
+}
+.mgt-20{
+margin-top: 10px;;
+}
+section{
+  padding: 15px 0;
+}
+.history{
+  padding: 30px 0 15px 0;
+}
+.icon-box-block img,
+.icon-box-block span {
+  height: 40px;
+}
+.icon img {
+    width: 30px;
+    height: 30px;
+}
+.stat-content p{
+  font-size: 12px;
+}
 }
 /*Custom*/
 /* Extra Small Devices, Phones */
@@ -9232,10 +9307,12 @@ line-height: 20px;
   /* Promotion text */
   .experience-year .des-text {
     text-align: center!important;
+    
   }
   .experience-year .des-text strong,
   .experience-year .des-text p {
     text-align: center!important;
+    font-size: 12px !important;
   }
   /* contact home 2 */
   .one-half.last {
@@ -9365,3 +9442,32 @@ button.mfp-arrow, .mfp-counter {
     height: 100%;
     background:rgba(0, 0, 0, 0.55) !important;
 }
+span.plus {
+    font-size: 150px;
+    vertical-align: top;
+}
+ .experience-year.ey1.d-xl-none.d-flex{
+    display: none;
+   }
+   .mm-listview>li.active>a{
+color: #e3bd8f;
+   }
+   .mm-listview{
+    font-weight: 500;
+   }.mm-title {
+  display: none !important;
+}
+.mm-navbar-bottom-1 {
+    bottom: 300px !important;
+}
+ .mm-navbar a{
+  font-size: 20px;
+ }
+ .mm-navbar-top-1 img {
+    height: 50px;
+    margin: 20px 0 0 20px;
+}
+/* .icon img {
+    width: 45px;
+    height: 45px;
+} */

@@ -7300,7 +7300,7 @@
         (a[c].uniqueId = 0),
         (a[c].defaults = {
           extensions: [],
-          navbar: { add: !0, title: "Menu", titleLink: "panel" },
+          navbar: { add: !0, title: "", titleLink: "panel" },
           onClick: { setSelected: !0 },
           slidingSubmenus: !0,
         }),

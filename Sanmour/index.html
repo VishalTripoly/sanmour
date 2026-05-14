@@ -34,6 +34,276 @@
 		<!-- Favicons
 			================================================== -->
 		<link rel="shortcut icon" href="images/favicon.png">
+		<style>
+			
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            width: 100%;
+            min-height: 100vh;
+            background: url('images/bg/2.png') center center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+/* DESKTOP IMAGE */
+.hero{
+    background: url('images/bg/2.png') center center/cover no-repeat;
+}
+
+/* TABLET IMAGE */
+@media(max-width:991px){
+
+    .hero{
+         background: url('images/bg/2.png') center center/cover no-repeat;
+    }
+
+}
+
+/* MOBILE IMAGE */
+@media(max-width:767px){
+
+   .hero{
+         background: url('images/bg/3.png') center center/cover no-repeat;
+    }
+}
+        /* DARK OVERLAY */
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to right,
+                    rgba(0, 0, 0, 0.92) 0%,
+                    rgba(0, 0, 0, 0.78) 28%,
+                    rgba(0, 0, 0, 0.38) 55%,
+                    rgba(0, 0, 0, 0.12) 100%);
+        }
+
+        /* ANGLED OVERLAY */
+
+        /* .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 42%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.28);
+            clip-path: polygon(0 0, 100% 0, 72% 100%, 0% 100%);
+        } */
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            padding: 0 6%;
+        }
+/* =========================
+   HERO ROW FIX
+========================= */
+
+.hero-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:120px;
+    width:100%;
+}
+
+/* LEFT SIDE */
+.left-content{
+    width:55%;
+    max-width:700px;
+}
+
+
+
+
+/* LEFT TITLE */
+.left-content h2{
+    /* font-size:72px; */
+    line-height:0.95;
+   
+    font-weight:300;
+    color:#fff;
+    margin-bottom:30px;
+}
+
+/* LINE */
+.line{
+    width:70px;
+    height:2px;
+    background:#caa46b;
+    margin-bottom:45px;
+}
+
+/* =========================
+   STATS ROW
+========================= */
+
+.stats{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    margin-top:10px;
+}
+
+/* ITEM */
+.stat-item{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding-right:35px;
+    border-right:1px solid rgba(255,255,255,0.15);
+}
+
+.stat-item:last-child{
+    border-right:none;
+    padding-right:0;
+}
+
+/* ICON */
+.icon{
+    width:56px;
+    height:56px;
+    
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#caa46b;
+    font-size:20px;
+    flex-shrink:0;
+}
+
+/* NUMBER */
+.stat-content h3{
+    
+    font-size:50px;
+    line-height:1;
+    color:#fff;
+    font-weight:400;
+}
+
+/* TEXT */
+.stat-content p{
+    font-size:14px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.72);
+    margin-top:6px;
+    white-space:nowrap;
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media(max-width:1400px){
+
+    .left-content h1{
+        font-size:74px;
+		text-align: left;
+    }
+
+    .left-content h2{
+        /* font-size:62px; */
+    }
+
+    .stats{
+        gap:25px;
+    }
+
+    .stat-item{
+        padding-right:25px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:991px){
+
+    .hero-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0px;
+    }
+
+    .left-content,
+    .right-content{
+        width:100%;
+    }
+
+    .right-content{
+        justify-content:flex-start;
+    }
+
+    .left-content h1{
+        font-size:64px;
+    }
+
+    .left-content h2{
+        /* font-size:54px; */
+    }
+
+    .stats{
+        flex-direction:column;
+        align-items:flex-start;
+        width:100%;
+        gap:24px;
+    }
+
+    .stat-item{
+        width:100%;
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,0.1);
+        padding:0 0 20px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:767px){
+
+    .hero{
+        padding:60px 20px 80px;
+    }
+
+    .hero-content{
+        padding:0 20px;
+    }
+
+    .left-content h2{
+        font-size:16px;
+		width:min-content;
+		line-height: 1.5;
+    }
+
+    .left-content h1{
+        font-size:48px;
+    }
+
+    .stat-content h3{
+        font-size:35px;
+		margin-bottom: 0;
+    }
+
+    .icon{
+        width:52px;
+        height:52px;
+    }
+	
+}
+		</style>
 	</head>
 	<body class="royal_loader">
 		<!-- royal_loader -->
@@ -246,36 +516,49 @@
 							<div class="row mgt-30">
 								
 								<div class="col-md-4">
-									<div class="icon-box-inline">
+									<div class="d-lg-block d-flex icon-box-inline">
 										<i class="fa fa-pencil"></i>
-										<h5 class="text-uppercase">Architecture Design</h5>
-										<p >We create exceptional designs that set new standards.</p>
+										<div class="details">
+											<h5 class="text-uppercase">Architecture Design</h5>
+										    <p >We create exceptional designs that set new standards.</p>
+										</div>
+										
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="icon-box-inline">
 										<i class="fa fa-building"></i>
-										<h5 class="text-uppercase">Interior Design</h5>
+										<div class="details"><h5 class="text-uppercase">Interior Design</h5>
 										<p>Complex architecture, thoughtfully crafted by expert interior designers.</p>
+										</div>
 										
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="icon-box-inline">
 										<i class="fa fa-pagelines" aria-hidden="true"></i>
-										<h5 class="text-uppercase">Landscapes Design</h5>
+										<div class="details">
+											<h5 class="text-uppercase">Landscapes Design</h5>
 										<p>Define your style, and let us execute it with precision and excellence.</p>
+										</div>
+										
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-12 ">
-							<div class="experience-year ey1">
-								<span>14</span>
+							<div class="experience-year ey1 d-xl-block d-none">
+								<span>14</span><span class="plus">+</span>
 								<div class="des-text ms-2">
 									<strong>YEARS OF
 									</strong>
 									<h6 ><strong>EXPERIENCE</strong></h6>
+								</div>
+							</div>
+							<div class="experience-year ey1 d-xl-none d-flex">
+								<span>14</span><span class="plus">+</span>
+								<div class="des-text ms-2">
+									<h6 ><strong> YEARS OF EXPERIENCE</strong></h6>
 								</div>
 							</div>
 						</div>
@@ -286,32 +569,96 @@
 			</section>
 			<!-- /Experience Year -->
 
-			<section class="boxed bg-img" style="background-image: url(images/bg/counter-1.jpg);">
-				<div class="container">
-					<div class="col-md-3 col-sm-6">
-						<div class="counter-block">
-							<span class="counter">200</span>
-							<p>PROJECTS</p>
+			
+			 <section class="hero">
+				<div class="hero-content">
+
+					<div class="hero-row">
+
+						<!-- LEFT -->
+
+						<div class="left-content">
+							
+							<h2>
+								Designing
+								Spaces.
+							</h2>
+							<h2>
+								Defining
+								Experiences.
+							</h2>
+
+							<div class="line"></div>
+
+							<div class="stats">
+
+							
+
+								<div class="stat-item">
+
+									<div class="icon">
+										<img src="images/icon/project.png" alt="Client Icon"  />
+									</div>
+
+									<div class="stat-content">
+										<h3>200</h3>
+										<p>Projects Completed</p>
+									</div>
+
+								</div>
+
+							
+								<div class="stat-item">
+
+									<div class="icon">
+										<img src="images/icon/Client.png" alt="Client Icon" />
+									</div>
+
+									<div class="stat-content">
+										<h3>150</h3>
+										<p>Clients Worldwide</p>
+									</div>
+
+								</div>
+								<div class="stat-item">
+
+									<div class="icon">
+									<img src="images/icon/Awards.png" alt="Client Icon"  />
+									</div>
+
+									<div class="stat-content">
+										<h3>12</h3>
+										<p>AWARDS</p>
+									</div>
+
+								</div>
+								<div class="stat-item">
+
+									<div class="icon">
+										<img src="images/icon/employee.png" alt="Employee Icon" />
+									</div>
+
+									<div class="stat-content">
+										<h3>15+</h3>
+										<p>EMPLOYEES</p>
+									</div>
+
+								</div>
+
+							</div>
+
 						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="counter-block">
-							<span class="counter">150</span>
-							<p>CLIENTS</p>
+
+						<!-- RIGHT -->
+
+						<div class="right-content">
+
+						
+
 						</div>
+
 					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="counter-block">
-							<span class="counter">12</span>
-							<p>AWARDS</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="counter-block">
-							<span class="counter">15</span>
-							<p>EMPLOYEES</p>
-						</div>
-					</div>
+
 				</div>
 			</section>
 			<!-- /Counter Up -->
