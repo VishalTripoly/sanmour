@@ -9530,7 +9530,7 @@ color: #e3bd8f;
     text-transform: capitalize;
 }
 #callbook .fa {
-    color: #fff;
+    color: #e3bd8f;
 }
 .callbook_logo {
     background-size: 100%;
@@ -9562,7 +9562,7 @@ a.actioncall, a.actionbook, a.icon {
     color: #000000;
 }
 #callbook a .fa-whatsapp {
-    color: #fff !important;
+    color: #e3bd8f !important;
     font-size: 45px;
     margin-top: 10px;
     /* margin-left: -10px; */
