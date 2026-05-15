@@ -5102,7 +5102,7 @@ label {
 .icon-box-inline img,
 .icon-box-inline span {
   width: 60px;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
 }
@@ -5142,15 +5142,20 @@ line-height: 1.75;
   margin-bottom: 20px;
 }
 .icon-box-center {
-  text-align: center;
+  
   font-weight: 500;
+  display: flex;
+  /* align-items: center; */
+  gap:20px;
 }
 .icon-box-center .box-icon {
-  height: 100px;
+  /* height: 100px; */
 }
 .icon-box-center img,
 .icon-box-center span {
-  margin: 30px auto;
+  /* margin: 30px auto; */
+  /* height: 40px;; */
+  max-width: fit-content;
 }
 .icon-box-center a {
   color: #999494;
@@ -5194,7 +5199,7 @@ line-height: 1.75;
   position: fixed;
   text-align: center;
   right: 30px;
-  bottom: 50px;
+  bottom: 180px;
   color: #fff;
   cursor: pointer;
   -webkit-border-radius: 2px;
@@ -5279,11 +5284,11 @@ footer > * {
   float: left;
 }
 .footer-home-1 .widget-social-list {
-  float: right;
+  /* float: right; */
 }
 .footer-home-1 .copyright {
   float: right;
-  padding-top: 25px;
+  padding-top: 35px;
   line-height: 28px;
 }
 .copyright .footer-link-2 li a {
@@ -8885,6 +8890,7 @@ footer.dark {
     text-align: center;
     padding-top: 0;
     clear: both;
+    margin-bottom: 50px !important;
   }
   .footer-1 {
     padding-bottom: 44px;
@@ -8954,6 +8960,7 @@ h4{
 }
 .mgt-60{
   margin-top:10px;
+  margin: 30px 10px;
 }
 .rev_slider{
   height: 420px !important;
@@ -8976,6 +8983,9 @@ h4{
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
+  }
+  .widget-social-list {
+    display: none;
   }
   /* Header 5 */
   .header-5 .widget-social-list {
@@ -9174,8 +9184,9 @@ line-height: 20px;
     padding: 0!important;
   }
   footer .logo img {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin-bottom: 15px;
+    width:150px;
   }
   footer .widget-social-list {
     width: 100%!important;
@@ -9261,6 +9272,21 @@ section{
 }
 .stat-content p{
   font-size: 12px;
+}
+.mm-navbar{
+  right:100px !important
+}
+.mm-menu.mm-theme-dark .mm-navbar a, .mm-menu.mm-theme-dark .mm-navbar>*, .mm-menu.mm-theme-dark em.mm-counter{
+  color:#e3bd8f
+}
+.icon-box-center .box-icon{
+  /* height: 65px; */
+}
+.icon-box-inline{
+  gap:0px !important;
+}
+.icon-box-inline img, .icon-box-inline span{
+  width: 30px;
 }
 }
 /*Custom*/
@@ -9373,6 +9399,9 @@ h1{
 a{
 	outline: 0 !important;
 }
+a, a:hover{
+  color:#999494
+}
 .magnific-img img {
     width: 100%;
     height: auto;
@@ -9471,3 +9500,81 @@ color: #e3bd8f;
     width: 45px;
     height: 45px;
 } */
+
+	.icon-box-inline{
+				display: flex;
+				align-items: flex-start;
+				gap: 20px;
+			}
+#callbook {
+    background: none repeat scroll 0 0 #000;
+    bottom: 0;
+    height: 48px;
+    left: 0;
+    position: fixed;
+    display: none;
+    right: 0;
+    z-index: 10;
+    -webkit-box-shadow: 0 2px 15px 0 #333;
+    -moz-box-shadow: 0 2px 15px 0 #333;
+    box-shadow: 0 2px 15px 0 #333;
+}
+#callbook>a {
+    z-index: 300;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    width: 50%;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+#callbook .fa {
+    color: #fff;
+}
+.callbook_logo {
+    background-size: 100%;
+    bottom: -9px;
+    height: 72px !important;
+    left: 50%;
+    margin-left: -21px;
+    position: absolute;
+    width: 72px !important;
+    z-index: 2;
+    font-size: -webkit-xxx-large;
+}
+.callbook_under {
+    background: #000;
+    bottom: -10px;
+    height: 78px;
+    left: 50%;
+    margin-left: -39px;
+    position: absolute;
+    width: 78px;
+    border-radius: 5000px;
+    -webkit-border-radius: 5000px;
+    z-index: 1;
+    -webkit-box-shadow: 0 2px 15px 0 #333;
+    -moz-box-shadow: 0 2px 15px 0 #333;
+    box-shadow: 0 2px 15px 0 #333;
+}
+a.actioncall, a.actionbook, a.icon {
+    color: #000000;
+}
+#callbook a .fa-whatsapp {
+    color: #fff !important;
+    font-size: 45px;
+    margin-top: 10px;
+    /* margin-left: -10px; */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+    #callbook {
+        display: inline !important;
+    }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+    .actionbook {
+        box-sizing: border-box;
+        padding-left: 38px;
+    }
+}

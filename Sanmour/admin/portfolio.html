@@ -70,7 +70,6 @@
 
         <!-- Filters -->
         <div class="projectFilter text-center">
-        <a href="#" data-filter="*" class="current">All</a>
         <a href="#" data-filter=".residential">Residential</a>
         <a href="#" data-filter=".commercial">Commercial</a>
         <a href="#" data-filter=".villa">Independent Bungalows / Villa</a>
@@ -111,7 +110,7 @@
 
 <!-- Dynamic Portfolio Logic (UNCHANGED) -->
 <script>
-const API_URL = 'http://localhost:8080';
+const API_URL = window.API_URL;
 let allProjects = [];
 
 function loadProjects() {
